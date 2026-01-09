@@ -1,57 +1,87 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Videos | The Innocent</title>
+    <title>Tour Dates | The Innocent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .video-grid-section {
+        .tour-section {
             padding: 100px 40px;
             background-color: #000;
         }
-        .video-grid {
-            max-width: 1200px;
+
+        .tour-container {
+            max-width: 1000px;
             margin: 0 auto;
+        }
+
+        .tour-row {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
+            grid-template-columns: 1.5fr 2fr 1.5fr 1fr;
+            padding: 30px 0;
+            border-bottom: 1px solid #222;
+            align-items: center;
+            transition: background 0.3s ease;
         }
-        .video-card {
-            background: #111;
-            padding-bottom: 20px;
+
+        .tour-row:hover {
+            background: rgba(255, 255, 255, 0.02);
         }
-        .video-card h3 {
+
+        .tour-date {
             font-family: 'Cinzel', serif;
-            font-size: 18px;
-            letter-spacing: 3px;
-            margin: 20px 20px 10px;
+            font-size: 16px;
+            letter-spacing: 2px;
             color: #fff;
         }
-        .video-card p {
+
+        .tour-venue {
             font-family: 'Cormorant Garamond', serif;
             font-style: italic;
-            margin: 0 20px;
+            font-size: 22px;
+            color: #fff;
+        }
+
+        .tour-location {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             color: #888;
         }
-        /* Reusing your video-container class for 16:9 ratio */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
+
+        .tour-btn {
+            text-align: right;
         }
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: 0;
+
+        .tour-btn .btn-outline {
+            padding: 10px 20px;
+            font-size: 14px;
         }
+
+        .no-dates {
+            text-align: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: #666;
+            padding: 100px 0;
+        }
+
         @media (max-width: 768px) {
-            .video-grid { grid-template-columns: 1fr; }
+            .tour-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+                text-align: center;
+                padding: 40px 0;
+            }
+            .tour-btn { text-align: center; margin-top: 15px; }
         }
     </style>
 </head>
@@ -86,37 +116,18 @@
     </header>
 
     <section class="hero">
-        <div class="hero-parallax" style="background-image: url('media/images/Telford13.jpg');"></div>
+        <div class="hero-parallax" style="background-image: url('media/images/156220123_10159186076945135_5994372359930231104_o_edited.jpg');"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2 class="hero-title">Official</h2>
-            <h1 class="hero-band-name">VIDEOS</h1>
+            <h2 class="hero-title">Upcoming</h2>
+            <h1 class="hero-band-name">TOUR DATES</h1>
         </div>
     </section>
 
-    <section class="video-grid-section">
-        <div class="video-grid">
-            <div class="video-card">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zk8U2OEm3sM?si=QggfjwTjKFXXZq4s"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-                <h3>The Game</h3>
-                <p>Official Music Video</p>
-            </div>
-            <div class="video-card">
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t5vwQHdGW6U?si=qtI4VNphVyC2thAE"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                </div>
-                <h3>All The Way Down</h3>
-                <p>Live from the Studio</p>
+    <section class="tour-section">
+        <div class="tour-container">
+            <div class="no-dates">
+                TBC | DATES TO BE ANNOUNCED SOON
             </div>
         </div>
     </section>
@@ -173,10 +184,5 @@
         </div>
     </footer>
 
-    <script>
-        function toggleMobileMenu() {
-            document.getElementById('mainNav').classList.toggle('active');
-        }
-    </script>
-</body>
+    </body>
 </html>

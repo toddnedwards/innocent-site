@@ -4,12 +4,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About The Band | The Innocent</title>
+    <title>Testimonials | The Innocent</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .testimonial-grid-wrapper {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 100px 40px;
+        }
+        .testimonial-box {
+            margin-bottom: 40px;
+            padding: 40px;
+            border-left: 1px solid #fff;
+            background: rgba(255,255,255,0.03);
+        }
+        .testimonial-box p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+        .testimonial-box span {
+            display: block;
+            margin-top: 20px;
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #fff;
+        }
+        .image-side-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            align-self: start;
+            position: sticky;
+            top: 120px;
+        }
+        .image-side-grid img { width: 100%; height: 250px; object-fit: cover; }
+        
+        @media (max-width: 968px) {
+            .testimonial-grid-wrapper { grid-template-columns: 1fr; }
+            .image-side-grid { position: static; order: -1; }
+        }
+    </style>
 </head>
 <body>
     <!-- Header / Navigation -->
@@ -29,14 +75,14 @@
         <nav id="mainNav">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About The Band</a></li>
+                <li><a href="about.html">About The Band</a></li>
                 <li><a href="music.html">Music</a></li>
                 <li><a href="videos.html">Videos</a></li>
                 <li>
                     <a href="live-bookings.html">Live Bookings</a>
                     <ul class="dropdown">
                         <li><a href="audio.html">Audio</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="testimonials.html" class="active">Testimonials</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
@@ -57,39 +103,46 @@
         </div>
     </header>
 
-    <!-- Hero Section - About -->
-    <section class="hero">
-        <div class="hero-parallax" style="background-image: url('media/images/Innocent Profile 2021.jpg');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h2 class="hero-title">About</h2>
-            <h1 class="hero-band-name">THE INNOCENT</h1>
-            <a href="music.html" class="btn-outline">Listen Here</a>
+    <section class="testimonial-grid-wrapper">
+        <div class="text-side">
+            <h2 class="section-title-caps" style="margin-bottom: 50px;">Client Kind Words</h2>
+            
+            <div class="testimonial-box">
+                <p>"The Innocent were absolutely incredible at our wedding. Their harmonies are even better in person and they created such a magical atmosphere for our drinks reception. Every guest commented on how beautiful their music was."</p>
+                <span>— Sarah & James, Wedding 2024</span>
+            </div>
+
+            <div class="testimonial-box">
+                <p>"Professional from start to finish. They handled all our requests with ease and the dance floor was packed all night. Their acoustic set during dinner was perfect, and they knew exactly how to read the room. Highly recommended for any corporate event."</p>
+                <span>— Event Manager, IKEA Corporate</span>
+            </div>
+            
+            <div class="testimonial-box">
+                <p>"A hauntingly beautiful set. They managed to be the perfect background music during dinner and then brought the energy up for the party later on. The transition was seamless and their song choices were spot on."</p>
+                <span>— Private Client, London</span>
+            </div>
+
+            <div class="testimonial-box">
+                <p>"We booked The Innocent for our anniversary celebration and they exceeded all expectations. Their acoustic arrangements of modern songs were stunning, and they even learned our wedding song specially for the occasion."</p>
+                <span>— Rachel & Tom, Private Event</span>
+            </div>
+
+            <div class="testimonial-box">
+                <p>"Fantastic band who really understood our brief. They provided the perfect soundtrack to our product launch - sophisticated but not overpowering. Several clients asked for their details!"</p>
+                <span>— Marketing Director, Tech Startup</span>
+            </div>
+
+            <div class="testimonial-box">
+                <p>"The Innocent brought such warmth and soul to our charity gala. Their performance during the auction helped create an emotional connection with our cause. We raised more than ever before."</p>
+                <span>— Charity Director, London</span>
+            </div>
         </div>
-    </section>
 
-    <!-- About Content Section with Parallax Background -->
-    <section class="content-parallax-section">
-        <div class="parallax-bg" style="background-image: url('Trio edited.jpg');"></div>
-        <div class="overlay"></div>
-        
-        <div class="content-wrapper">
-            <!-- About Us Column -->
-            <div class="content-column">
-                <h2>About Us</h2>
-                <p>The Innocent are an alternative indie-folk act originally hailing from Oswestry, Shropshire. If you have ever been to Oswestry, you will understand why the majority of their songs are in a minor key.</p>
-                <p>The band started life in 2010, playing original music and garnering praise for their exquisite harmonies and evocative and mesmerising live sets. Since then, they have toured across Europe and America and have supported some of their personal heroes in the alt-folk world such as Gregory Alan Isakov.</p>
-                <p>They continue to live in Shropshire and North Wales where they enjoy referring to themselves in the third person.</p>
-                <a href="music.html" class="btn-outline">Our Music</a>
-            </div>
-
-            <!-- Live Music Column -->
-            <div class="content-column">
-                <h2>Live Music</h2>
-                <p>Based in Shropshire and North Wales, The Innocent are one of the most popular and experienced acoustic acts in the country, covering a wide range of styles and genres, as well as producing their own original music.</p>
-                <p>When not writing and performing their own music, they can be found putting their own unique spin on classic songs from every genre. As well as regularly performing for private events, their former clients include performances and recordings for the likes of Disney, Radio 5, Ikea and Carnival Cruise Lines.</p>
-                <a href="live-bookings.html" class="btn-outline">Find Out More</a>
-            </div>
+        <div class="image-side-grid">
+            <img src="media/images/11536496_662449483899652_1747347071867712976_o.jpg" alt="Live 1">
+            <img src="media/images/13246193_10153669680697194_2682556141093593192_o.jpg" alt="Live 2">
+            <img src="media/images/0866a9_5e5fb8e349e64af2b1dc2bcde33dc880~mv2.jpg" alt="Live 3">
+            <img src="media/images/AAG_0075.jpg" alt="Live 4">
         </div>
     </section>
 
@@ -146,7 +199,6 @@
     </footer>
 
     <script>
-        // Mobile Menu Toggle
         function toggleMobileMenu() {
             const nav = document.getElementById('mainNav');
             nav.classList.toggle('active');
@@ -173,5 +225,6 @@
             }
         });
     </script>
-</body>
+
+    </body>
 </html>

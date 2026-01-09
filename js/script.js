@@ -26,7 +26,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form validation (for contact page)
+// Form validation and submission (for contact page)
 const contactForm = document.querySelector('#contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
@@ -35,21 +35,78 @@ if (contactForm) {
         const name = document.querySelector('#name').value.trim();
         const email = document.querySelector('#email').value.trim();
         const message = document.querySelector('#message').value.trim();
+        const submitBtn = document.querySelector('#submit-btn');
+        const btnText = document.querySelector('.btn-text');
+        const btnLoading = document.querySelector('.btn-loading');
         
+        // Clear previous feedback
+        const feedback = document.getElementById('form-feedback');
+        if (feedback) {
+            feedback.style.display = 'none';
+        }
+        
+        // Client-side validation
         if (name === '' || email === '' || message === '') {
-            alert('Please fill in all fields');
+            showFormMessage('Please fill in all required fields', 'error');
             return;
         }
         
         if (!isValidEmail(email)) {
-            alert('Please enter a valid email address');
+            showFormMessage('Please enter a valid email address', 'error');
             return;
         }
         
-        // Here you would typically send the form data to a server
-        alert('Thank you for your message! We will get back to you soon.');
-        contactForm.reset();
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.style.display = 'none';
+        btnLoading.style.display = 'inline';
+        
+        // Prepare form data
+        const formData = new FormData(contactForm);
+        
+        // Send AJAX request
+        fetch('contact-handler.php', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showFormMessage(data.message, 'success');
+                contactForm.reset();
+            } else {
+                const errorMsg = data.errors ? data.errors.join(', ') : 'An error occurred. Please try again.';
+                showFormMessage(errorMsg, 'error');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            showFormMessage('An error occurred. Please try again later or email us directly at adam@theinnocent.co.uk', 'error');
+        })
+        .finally(() => {
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.style.display = 'inline';
+            btnLoading.style.display = 'none';
+        });
     });
+}
+
+// Show form feedback messages
+function showFormMessage(message, type) {
+    const feedback = document.getElementById('form-feedback');
+    if (feedback) {
+        feedback.textContent = message;
+        feedback.className = 'form-feedback ' + type;
+        feedback.style.display = 'block';
+        feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        // Fallback to alert if feedback element not found
+        alert(message);
+    }
 }
 
 // Email validation helper function
