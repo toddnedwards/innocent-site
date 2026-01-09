@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Innocent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-section { padding: 100px 40px; background: #000; text-align: center; }
+        .contact-form-container { max-width: 700px; margin: 0 auto; text-align: left; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-family: 'Cinzel', serif; font-size: 12px; letter-spacing: 2px; margin-bottom: 10px; color: #888; }
+        .form-group input, .form-group textarea {
+            width: 100%; padding: 15px; background: transparent; border: 1px solid #333; color: #fff; font-family: 'Open Sans', sans-serif; transition: border-color 0.3s;
+        }
+        .form-group input:focus, .form-group textarea:focus { border-color: #fff; outline: none; }
+        .submit-btn {
+            width: 100%; padding: 20px; background: #fff; color: #000; border: none; font-family: 'Cinzel', serif; letter-spacing: 3px; cursor: pointer; transition: all 0.3s;
+        }
+        .submit-btn:hover { background: #999; }
+        .submit-btn:disabled { background: #555; cursor: not-allowed; }
+        .form-feedback { margin-bottom: 20px; padding: 15px; border-radius: 5px; }
+        .form-feedback.success { background: #004d00; color: #90ee90; border: 1px solid #90ee90; }
+        .form-feedback.error { background: #4d0000; color: #ff9090; border: 1px solid #ff9090; }
+        .btn-loading { color: #666; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="media/images/Unknown.png" alt="The Innocent Logo"></a></div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Band</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li>
+                    <a href="live-bookings.html">Live Bookings</a>
+                    <ul class="dropdown">
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li>
+                    <a href="#">More</a>
+                    <ul class="dropdown">
+                        <li><a href="images.html">Pictures</a></li>
+                        <li><a href="tour-dates.html">Tour Dates</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right"><div class="arts-council-logo"><img src="media/images/Logo_Black_RGB.png" alt="Arts Council England"></div></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-parallax" style="background-image: url('media/images/Verbier2.jpg'); background-position: bottom center; background-size: cover;"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Get in</h2>
+            <h1 class="hero-band-name">TOUCH</h1>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-form-container">
+            <h2 class="section-title-script" style="font-size: 32px; margin-bottom: 10px;">Booking Enquiries</h2>
+            <p style="color: #888; margin-bottom: 40px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 18px;">
+                Please fill out the form below with your event details and we will get back to you as soon as possible.
+            </p>
+            
+            <!-- Form feedback messages -->
+            <div id="form-feedback" style="display: none; margin-bottom: 20px; padding: 15px; border-radius: 5px;"></div>
+            
+            <form id="contact-form" action="contact-handler.php" method="POST">
+                <div class="form-group">
+                    <label>YOUR NAME</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>EMAIL ADDRESS</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>SUBJECT</label>
+                    <input type="text" name="subject" id="subject" required>
+                </div>
+                <div class="form-group">
+                    <label>MESSAGE</label>
+                    <textarea name="message" id="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submit-btn">
+                    <span class="btn-text">SEND MESSAGE</span>
+                    <span class="btn-loading" style="display: none;">SENDING...</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Enquiries & Bookings -->
+            <div class="footer-section">
+                <h3>Enquiries &amp; Bookings</h3>
+                <p><em>UK &amp; International:</em></p> 
+                <a class="tel-number" href="tel: +447734 666614"><em>(+44) 07734 666614</em></a>
+                <a class="tel-number" href="mailto:adam@theinnocent.co.uk"><em>adam@theinnocent.co.uk</em></a>
+                <div class="contact-details">
+                    <!-- ADD YOUR CONTACT DETAILS HERE -->
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/7yYOWhE9MWL6ihQqNofzxk?si=PvyqNb-3Q669EmFlm-6oKg" target="_blank" rel="noopener" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLmknhDmpOaKMq5JHKW_u3Q" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://music.apple.com/gb/artist/the-innocent/1475608445" target="_blank" rel="noopener" aria-label="Apple Music">
+                        <i class="fab fa-itunes-note"></i>
+                    </a>
+                    <a href="https://www.facebook.com/theinnocentmusic/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theinnocentuk/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <!-- <div class="footer-section">
+                <h3>Subscribe for updates</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 by The Innocent</p>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        function toggleMobileMenu() { document.getElementById('mainNav').classList.toggle('active'); }
+        
+        // Show messages from URL parameters (for non-AJAX submissions)
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const feedback = document.getElementById('form-feedback');
+            
+            if (urlParams.get('sent') === '1') {
+                showMessage('Thank you for your enquiry! We will get back to you within 24 hours.', 'success');
+            } else if (urlParams.get('error')) {
+                showMessage(urlParams.get('error'), 'error');
+            }
+        });
+        
+        function showMessage(message, type) {
+            const feedback = document.getElementById('form-feedback');
+            feedback.textContent = message;
+            feedback.className = 'form-feedback ' + type;
+            feedback.style.display = 'block';
+            feedback.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>

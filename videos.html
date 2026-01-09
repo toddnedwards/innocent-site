@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos | The Innocent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .video-grid-section {
+            padding: 100px 40px;
+            background-color: #000;
+        }
+        .video-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        .video-card {
+            background: #111;
+            padding-bottom: 20px;
+        }
+        .video-card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            letter-spacing: 3px;
+            margin: 20px 20px 10px;
+            color: #fff;
+        }
+        .video-card p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            margin: 0 20px;
+            color: #888;
+        }
+        /* Reusing your video-container class for 16:9 ratio */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border: 0;
+        }
+        @media (max-width: 768px) {
+            .video-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="media/images/Unknown.png" alt="The Innocent Logo"></a></div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Band</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li>
+                    <a href="live-bookings.html" class="active">Live Bookings</a>
+                    <ul class="dropdown">
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#">More</a>
+                    <ul class="dropdown">
+                        <li><a href="images.html">Pictures</a></li>
+                        <li><a href="tour-dates.html">Tour Dates</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right"><div class="arts-council-logo"><img src="media/images/Logo_Black_RGB.png" alt="Arts Council England"></div></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-parallax" style="background-image: url('media/images/Telford13.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Official</h2>
+            <h1 class="hero-band-name">VIDEOS</h1>
+        </div>
+    </section>
+
+    <section class="video-grid-section">
+        <div class="video-grid">
+            <!-- The Game -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zk8U2OEm3sM?si=QggfjwTjKFXXZq4s"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>The Game</h3>
+                <p>Official Music Video</p>
+            </div>
+            <!-- All The Way Down -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t5vwQHdGW6U?si=qtI4VNphVyC2thAE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>All The Way Down</h3>
+                <p>Official Video</p>
+            </div>
+            <!-- Weight Of the world -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/CSy0twI-X5c?si=O-y1EUcq0hXVfBjj"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>Weight Of the World</h3>
+                <p>Lyric Video</p>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/9vmXp2hRoOA?si=p4q0BL1HViLcpVKX"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>Fireflies</h3>
+                <p>Official Video</p>
+            </div>
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/qEUiv4md0Kw?si=GT6Ib5ylCF9YlU-f"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>Dropkick Murphys - Shipping Up To Boston</h3>
+            </div>
+            <!-- Little Lion Man -->
+            <div class="video-card">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zQM8gwbCrg0?si=oKtHYpuSP9dLDTbr"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <h3>Mumford & Sons - Little Lion Man</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Enquiries & Bookings -->
+            <div class="footer-section">
+                <h3>Enquiries &amp; Bookings</h3>
+                <p><em>UK &amp; International:</em></p> 
+                <a class="tel-number" href="tel: +447734 666614"><em>(+44) 07734 666614</em></a>
+                <a class="tel-number" href="mailto:adam@theinnocent.co.uk"><em>adam@theinnocent.co.uk</em></a>
+                <div class="contact-details">
+                    <!-- ADD YOUR CONTACT DETAILS HERE -->
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/7yYOWhE9MWL6ihQqNofzxk?si=PvyqNb-3Q669EmFlm-6oKg" target="_blank" rel="noopener" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLmknhDmpOaKMq5JHKW_u3Q" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://music.apple.com/gb/artist/the-innocent/1475608445" target="_blank" rel="noopener" aria-label="Apple Music">
+                        <i class="fab fa-itunes-note"></i>
+                    </a>
+                    <a href="https://www.facebook.com/theinnocentmusic/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theinnocentuk/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <!-- <div class="footer-section">
+                <h3>Subscribe for updates</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 by The Innocent</p>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

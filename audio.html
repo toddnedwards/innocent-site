@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio | The Innocent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .audio-section { padding: 80px 40px; background: #000; }
+        .audio-container { max-width: 1000px; margin: 0 auto; }
+        .audio-item { margin-bottom: 40px; background: #111; padding: 30px; border: 1px solid #222; }
+        .audio-item h3 { font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 18px; margin-bottom: 20px; color: #fff; }
+        .player-placeholder { background: #222; height: 100px; display: flex; align-items: center; justify-content: center; color: #666; font-style: italic; }
+        
+        /* Dropdown active styling */
+        nav ul li .dropdown li a.active { background-color: #f5f5f5; color: #666; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="media/images/Unknown.png" alt="The Innocent Logo"></a></div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Band</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li>
+                    <a href="live-bookings.html" class="active">Live Bookings</a>
+                    <ul class="dropdown">
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#">More</a>
+                    <ul class="dropdown">
+                        <li><a href="images.html">Pictures</a></li>
+                        <li><a href="tour-dates.html">Tour Dates</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right"><div class="arts-council-logo"><img src="media/images/Logo_Black_RGB.png" alt="Arts Council England"></div></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-parallax" style="background-image: url('media/images/13227721_1188573184486435_1600390283273019874_o.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Live Performance</h2>
+            <h1 class="hero-band-name">AUDIO</h1>
+        </div>
+    </section>
+
+    <section class="audio-section">
+        <div class="audio-container">
+            <div class="audio-item">
+                <h3>Covers</h3>
+                <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/soundcloud%3Aplaylists%3A2170355828%3Fsecret_token%3Ds-k2C2XB2ITGt&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                <div
+                    style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                    <a href="https://soundcloud.com/the-innocent-1" title="The Innocent" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">The Innocent</a> · <a
+                        href="https://soundcloud.com/the-innocent-1/sets/covers/s-k2C2XB2ITGt" title="Covers" target="_blank"
+                        style="color: #cccccc; text-decoration: none;">Covers</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Enquiries & Bookings -->
+            <div class="footer-section">
+                <h3>Enquiries &amp; Bookings</h3>
+                <p><em>UK &amp; International:</em></p> 
+                <a class="tel-number" href="tel: +447734 666614"><em>(+44) 07734 666614</em></a>
+                <a class="tel-number" href="mailto:adam@theinnocent.co.uk"><em>adam@theinnocent.co.uk</em></a>
+                <div class="contact-details">
+                    <!-- ADD YOUR CONTACT DETAILS HERE -->
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/7yYOWhE9MWL6ihQqNofzxk?si=PvyqNb-3Q669EmFlm-6oKg" target="_blank" rel="noopener" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLmknhDmpOaKMq5JHKW_u3Q" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://music.apple.com/gb/artist/the-innocent/1475608445" target="_blank" rel="noopener" aria-label="Apple Music">
+                        <i class="fab fa-itunes-note"></i>
+                    </a>
+                    <a href="https://www.facebook.com/theinnocentmusic/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theinnocentuk/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <!-- <div class="footer-section">
+                <h3>Subscribe for updates</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 by The Innocent</p>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() { document.getElementById('mainNav').classList.toggle('active'); }
+    </script>
+</body>
+</html>

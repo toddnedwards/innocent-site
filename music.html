@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music | The Innocent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="media/images/Unknown.png" alt="The Innocent Logo">
+            </a>
+        </div>
+
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Band</a></li>
+                <li><a href="music.html" class="active">Music</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li>
+                    <a href="live-bookings.html">Live Bookings</a>
+                    <ul class="dropdown">
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#">More</a>
+                    <ul class="dropdown">
+                        <li><a href="images.html">Images</a></li>
+                        <li><a href="tour-dates.html">Tour Dates</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <div class="arts-council-logo">
+                <img src="media/images/Logo_Black_RGB.png" alt="Supported using public funding by Arts Council England">
+            </div>
+        </div>
+    </header>
+
+    <!-- Music Hero Section -->
+    <section class="music-hero">
+        <div class="music-hero-overlay"></div>
+        <div class="music-hero-content">
+            <h1>LOST (2025) OUT NOW</h1>
+        </div>
+    </section>
+
+    <!-- Album Showcase Section -->
+    <section class="album-showcase">
+        <div class="album-showcase-content">
+            <!-- Featured Album -->
+            <div class="featured-album-section">
+                <div class="featured-album-cover">
+                    <img src="media/images/grand_jpeg_white.jpg" alt="Lost (2025) Album Cover">
+                </div>
+                <div class="featured-album-info">
+                    <h2>THE INNOCENT</h2>
+                    <h3>Lost (2025)</h3>
+                    <p></p>
+                    <a href="https://li.sten.to/lost2025" target="_blank" class="btn-outline">Stream the NEW ALBUM now</a>
+                </div>
+            </div>
+
+            <!-- Albums Grid -->
+            <div class="albums-grid-section">
+                <div class="albums-grid">
+                    <!-- Lost (2025) Digital -->
+                    <div class="album-item">
+                        <div class="album-item-wrapper">
+                            <span class="album-badge">Digital download</span>
+                            <a href="https://theinnocentuk.bandcamp.com/" target="_blank">
+                                <img src="media/images/lostcover.png" alt="Lost (2025) - Digital Download">
+                            </a>
+                        </div>
+                        <h4>Lost (2025) - Digital Download</h4>
+                        <p class="price">£5.99</p>
+                    </div>
+
+                    <!-- The Rapture (2021) -->
+                    <div class="album-item">
+                        <div class="album-item-wrapper">
+                            <span class="album-badge">Out Now</span>
+                            <a href="https://theinnocentuk.bandcamp.com/album/the-rapture" target="_blank">
+                                <img src="media/images/Rapture_Cover.png" alt="The Rapture (2021) - CD">
+                            </a>
+                        </div>
+                        <h4>The Rapture (2021) - CD</h4>
+                        <p class="price">£10.99</p>
+                    </div>
+
+                    <!-- Lost (2019) -->
+                    <div class="album-item">
+                        <div class="album-item-wrapper">
+                            <span class="album-badge">Best Seller</span>
+                            <a href="https://theinnocentuk.bandcamp.com/" target="_blank">
+                                <img src="media/images/Lost_cover_new.png" alt="Lost (2019) - CD">
+                            </a>
+                        </div>
+                        <h4>Lost (2019) - CD</h4>
+                        <p class="price">£10.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Album Description Section -->
+    <section class="album-description">        
+        <p>Click <a href="https://theinnocentuk.bandcamp.com/" target="_blank">here</a> to see our full selection of products on Bandcamp and for all international orders</p>
+
+        <div class="arts-council-section">
+            <img src="media/images/Logo_Black_RGB.png" alt="Arts Council England">
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section class="media-section">
+        <div class="media-content">
+            <!-- Audio Player 1 - The Rapture -->
+            <div class="media-item">
+                <!-- Using Bandcamp embed - replace with your actual embed code -->
+                <iframe style="border: 0; width: 100%; height: 120px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=1575794336/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+                    seamless><a href="https://theinnocentuk.bandcamp.com/album/the-rapture">The Rapture by The Innocent</a></iframe>
+            </div>
+
+            <!-- Video 1 - All The Way Down -->
+            <div class="media-item">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/t5vwQHdGW6U?si=qtI4VNphVyC2thAE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Video 2 - The Game -->
+            <div class="media-item">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zk8U2OEm3sM?si=QggfjwTjKFXXZq4s"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Audio Player 2 - Dionysus -->
+            <div class="media-item">
+                <!-- Using Bandcamp embed - replace with your actual embed code -->
+                <iframe style="border: 0; width: 100%; height: 120px;"
+                    src="https://bandcamp.com/EmbeddedPlayer/album=176268134/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+                    seamless><a href="https://theinnocentuk.bandcamp.com/album/lost-2025">Lost (2025) by The Innocent</a>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Enquiries & Bookings -->
+            <div class="footer-section">
+                <h3>Enquiries &amp; Bookings</h3>
+                <p><em>UK &amp; International:</em></p> 
+                <a class="tel-number" href="tel: +447734 666614"><em>(+44) 07734 666614</em></a>
+                <a class="tel-number" href="mailto:adam@theinnocent.co.uk"><em>adam@theinnocent.co.uk</em></a>
+                <div class="contact-details">
+                    <!-- ADD YOUR CONTACT DETAILS HERE -->
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/7yYOWhE9MWL6ihQqNofzxk?si=PvyqNb-3Q669EmFlm-6oKg" target="_blank" rel="noopener" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLmknhDmpOaKMq5JHKW_u3Q" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://music.apple.com/gb/artist/the-innocent/1475608445" target="_blank" rel="noopener" aria-label="Apple Music">
+                        <i class="fab fa-itunes-note"></i>
+                    </a>
+                    <a href="https://www.facebook.com/theinnocentmusic/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theinnocentuk/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <!-- <div class="footer-section">
+                <h3>Subscribe for updates</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 by The Innocent</p>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Dropdown toggle for mobile
+        document.querySelectorAll('nav ul > li').forEach(item => {
+            if (item.querySelector('.dropdown')) {
+                item.querySelector('a').addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        item.classList.toggle('dropdown-open');
+                    }
+                });
+            }
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const nav = document.getElementById('mainNav');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+                nav.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
