@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song List | The Innocent</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .song-list-content {
+            background-image: url('media/images/Wilby Flawless Photography.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .song-list-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.492);
+            z-index: 1;
+        }
+        
+        .song-list-content .container {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .song-category {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            width: 60%;
+            max-width: 800px;
+        }
+        
+        .song-category h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .song-category ul.song-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .song-category ul.song-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            color: #444;
+            font-weight: 400;
+        }
+        
+        .song-category ul.song-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .special-requests {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            width: 60%;
+            max-width: 800px;
+        }
+        
+        .special-requests h3 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .special-requests p {
+            color: #444;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="media/images/Unknown.png" alt="The Innocent Logo"></a></div>
+        <div class="mobile-menu-toggle" onclick="toggleMobileMenu()"><span></span><span></span><span></span></div>
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About The Band</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="videos.html">Videos</a></li>
+                <li>
+                    <a href="live-bookings.html">Live Bookings</a>
+                    <ul class="dropdown">
+                        <li><a href="audio.html">Audio</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li>
+                    <a href="#" class="active">More</a>
+                    <ul class="dropdown">
+                        <li><a href="images.html">Pictures</a></li>
+                        <li><a href="tour-dates.html">Tour Dates</a></li>
+                        <li><a href="song-list.html" class="active">Song List</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-right"><div class="arts-council-logo"><img src="media/images/Logo_Black RGB.png" alt="Arts Council England"></div></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-parallax" style="background-image: url('media/images/72639517_10156159785840882_7513121728944406528_o.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2 class="hero-title">Song</h2>
+            <h1 class="hero-band-name">LIST</h1>
+            <p class="hero-subtitle">Our Repertoire</p>
+        </div>
+    </section>
+
+    <!-- Song List Section -->
+    <section class="content-section song-list-content" style="margin: 0; text-align: center; padding: 50px 0;">
+        <div class="container">
+            <h2>Song Repertoire</h2>
+            <br>
+            <p class="intro-text">Here's a selection of songs from our extensive repertoire. We're always happy to learn new material for special requests.</p>
+            
+            <br>
+            <!-- Song categories -->
+            <div class="song-categories">
+                <div class="song-category">
+                    <h3><strong>Popular Covers</strong></h3>
+                    <br>
+                    <ul class="song-list">
+                        <li>Mr. Brightside - The Killers</li>
+                        <li>Don't Stop Believin' - Journey</li>
+                        <li>Sweet Caroline - Neil Diamond</li>
+                        <li>Livin' on a Prayer - Bon Jovi</li>
+                        <li>Dancing Queen - ABBA</li>
+                        <li>I Want It That Way - Backstreet Boys</li>
+                        <li>Wonderwall - Oasis</li>
+                        <li>Bohemian Rhapsody - Queen</li>
+                        <li>Hey Jude - The Beatles</li>
+                        <li>Hotel California - Eagles</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="song-category">
+                    <h3><strong>Wedding Favorites</strong></h3>
+                    <br>
+                    <ul class="song-list">
+                        <li>Perfect - Ed Sheeran</li>
+                        <li>Thinking Out Loud - Ed Sheeran</li>
+                        <li>All of Me - John Legend</li>
+                        <li>A Thousand Years - Christina Perri</li>
+                        <li>Can't Help Myself - Four Tops</li>
+                        <li>At Last - Etta James</li>
+                        <li>Make You Feel My Love - Bob Dylan/Adele</li>
+                        <li>September - Earth, Wind & Fire</li>
+                        <li>I Wanna Dance with Somebody - Whitney Houston</li>
+                        <li>Uptown Funk - Mark Ronson ft. Bruno Mars</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="song-category">
+                    <h3><strong>Rock Classics</strong></h3>
+                    <br>
+                    <ul class="song-list">
+                        <li>Don't Stop Me Now - Queen</li>
+                        <li>Sweet Child O' Mine - Guns N' Roses</li>
+                        <li>Living After Midnight - Judas Priest</li>
+                        <li>You're My Best Friend - Queen</li>
+                        <li>Born to Run - Bruce Springsteen</li>
+                        <li>American Pie - Don McLean</li>
+                        <li>Free Bird - Lynyrd Skynyrd</li>
+                        <li>Stairway to Heaven - Led Zeppelin</li>
+                        <li>More Than a Feeling - Boston</li>
+                        <li>Dream On - Aerosmith</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="song-category">
+                    <h3>Modern Hits</h3>
+                    <ul class="song-list">
+                        <li>Shut Up and Dance - Walk the Moon</li>
+                        <li>Counting Stars - OneRepublic</li>
+                        <li>Somebody That I Used to Know - Gotye</li>
+                        <li>Radioactive - Imagine Dragons</li>
+                        <li>Happy - Pharrell Williams</li>
+                        <li>Get Lucky - Daft Punk</li>
+                        <li>Blinding Lights - The Weeknd</li>
+                        <li>Levitating - Dua Lipa</li>
+                        <li>As It Was - Harry Styles</li>
+                        <li>Anti-Hero - Taylor Swift</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="song-category">
+                    <h3><strong>Party Anthems</strong></h3>
+                    <br>
+                    <ul class="song-list">
+                        <li>I Gotta Feeling - Black Eyed Peas</li>
+                        <li>Party Rock Anthem - LMFAO</li>
+                        <li>Celebration - Kool & The Gang</li>
+                        <li>Dancing in the Street - Martha and the Vandellas</li>
+                        <li>Twist and Shout - The Beatles</li>
+                        <li>Good as Hell - Lizzo</li>
+                        <li>Can't Stop the Feeling - Justin Timberlake</li>
+                        <li>24K Magic - Bruno Mars</li>
+                        <li>Love Shack - The B-52's</li>
+                        <li>Come On Eileen - Dexys Midnight Runners</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="song-category">
+                    <h3><strong>Slow Dances</strong></h3>
+                    <br>
+                    <ul class="song-list">
+                        <li>Unchained Melody - The Righteous Brothers</li>
+                        <li>The Way You Look Tonight - Frank Sinatra</li>
+                        <li>Stand By Me - Ben E. King</li>
+                        <li>Wonderful Tonight - Eric Clapton</li>
+                        <li>Something - The Beatles</li>
+                        <li>Have I Told You Lately - Rod Stewart</li>
+                        <li>Crazy Little Thing Called Love - Queen</li>
+                        <li>Better Days - OneRepublic</li>
+                        <li>Stay with Me - Sam Smith</li>
+                        <li>Just the Way You Are - Billy Joel</li>
+                    </ul>
+                </div>
+            </div>
+            <br>
+            <div class="special-requests">
+                <h3>Special Requests</h3>
+                <br>
+                <p>Don't see your favorite song? We're always happy to learn new material for your special event. Just let us know what you'd like to hear, and we'll do our best to make it happen!</p>
+                <br>
+                <a href="contact.html" class="btn-solid">Request a Song</a>
+            </div>
+        </div>
+        <br>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <!-- Enquiries & Bookings -->
+            <div class="footer-section">
+                <h3>Enquiries &amp; Bookings</h3>
+                <p><em>UK &amp; International:</em></p> 
+                <a class="tel-number" href="tel: +447734 666614"><em>(+44) 07734 666614</em></a>
+                <a class="tel-number" href="mailto:adam@theinnocent.co.uk"><em>adam@theinnocent.co.uk</em></a>
+                <div class="contact-details">
+                    <!-- ADD YOUR CONTACT DETAILS HERE -->
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://open.spotify.com/artist/7yYOWhE9MWL6ihQqNofzxk?si=PvyqNb-3Q669EmFlm-6oKg" target="_blank" rel="noopener" aria-label="Spotify">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCLmknhDmpOaKMq5JHKW_u3Q" target="_blank" rel="noopener" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://music.apple.com/gb/artist/the-innocent/1475608445" target="_blank" rel="noopener" aria-label="Apple Music">
+                        <i class="fab fa-itunes-note"></i>
+                    </a>
+                    <a href="https://www.facebook.com/theinnocentmusic/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/theinnocentuk/" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Subscribe -->
+            <!-- <div class="footer-section">
+                <h3>Subscribe for updates</h3>
+                <form class="subscribe-form" action="#" method="POST">
+                    <input type="email" name="email" placeholder="Email address" required>
+                    <button type="submit">Subscribe Now</button>
+                </form>
+            </div> -->
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 by The Innocent</p>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+        }
+
+        // Parallax script
+        window.addEventListener('scroll', function() {
+            if (window.innerWidth > 768) {
+                const scrolled = window.pageYOffset;
+                const parallaxItems = document.querySelectorAll('.hero-parallax, .parallax-bg');
+                parallaxItems.forEach(item => {
+                    // Adjust the speed (0.5) to your liking
+                    item.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>

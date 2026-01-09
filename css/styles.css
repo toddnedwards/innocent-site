@@ -181,9 +181,9 @@ nav ul li .dropdown li a:hover {
     top: 0;
     left: 0;
     width: 100%;
-    height: 120%;
+    height: 80%;
     background-size: cover;
-    background-position: center;
+    background-position: top center;
     background-attachment: fixed;
     z-index: -1;
 }
@@ -277,10 +277,11 @@ nav ul li .dropdown li a:hover {
 
 .content-parallax-section {
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     padding: 100px 40px;
+    overflow: hidden;
 }
 
 .content-parallax-section .parallax-bg {
@@ -291,7 +292,7 @@ nav ul li .dropdown li a:hover {
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     z-index: -1;
 }
 
@@ -598,13 +599,6 @@ footer {
 
 /* Parallax fallback for mobile/touch devices */
 @supports (-webkit-touch-callout: none) {
-    .hero-parallax,
-    .content-parallax-section .parallax-bg {
-        background-attachment: scroll;
-    }
-}
-
-@media (max-width: 768px) {
     .hero-parallax,
     .content-parallax-section .parallax-bg {
         background-attachment: scroll;

@@ -33,7 +33,7 @@ try {
     // Get and sanitize form data
     $name = isset($_POST['name']) ? sanitize_input($_POST['name']) : '';
     $email = isset($_POST['email']) ? sanitize_input($_POST['email']) : '';
-    $event = isset($_POST['event']) ? sanitize_input($_POST['event']) : '';
+    $subject = isset($_POST['subject']) ? sanitize_input($_POST['subject']) : '';
     $message = isset($_POST['message']) ? sanitize_input($_POST['message']) : '';
 
     // Validation
@@ -64,7 +64,7 @@ try {
         $email_body = "New booking enquiry received from The Innocent website:\n\n";
         $email_body .= "Name: " . $name . "\n";
         $email_body .= "Email: " . $email . "\n";
-        $email_body .= "Event Type & Date: " . ($event ?: 'Not specified') . "\n\n";
+        $email_body .= "Subject: " . ($subject ?: 'Not specified') . "\n\n";
         $email_body .= "Message:\n" . $message . "\n\n";
         $email_body .= "---\n";
         $email_body .= "Sent from: " . $_SERVER['HTTP_HOST'] . "\n";
